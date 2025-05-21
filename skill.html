@@ -1,0 +1,292 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Portfolio Skills
+  </title>
+  <style>
+   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+    * {
+      box-sizing: border-box;
+    }
+    body, html {
+      margin: 0; padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url(foto/download.jpg);
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      color: #333;
+      min-height: 100vh;
+      line-height: 1.5;
+    }
+    header {
+      height: 60px;
+      background: #F67280;
+      color: white;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1rem;
+      box-shadow: 0 2px 7px rgb(0 0 0 / 0.15);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1100;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.4rem;
+      line-height: 1;
+    }
+    h2.section-title {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      font-weight: 700;
+      color: #f45c6d;
+    }
+    nav#topNav {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      flex-wrap: nowrap;
+    }
+    nav#topNav a {
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.3rem 0.7rem;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+    nav#topNav a:hover,
+    nav#topNav a.active {
+      background: white;
+      color: #f45c6d;
+      text-decoration: none;
+    }
+    main {
+      position: relative;
+      min-height: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 2.5rem;
+      overflow: hidden;
+      padding-bottom: 3rem;
+      padding-top: 80px;
+    } 
+    main img.background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      z-index: -1;
+    }
+    main h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      font-weight: 700;
+      color: #F67280;
+    }
+
+    /* Tambahan: wrapper untuk grid agar selalu di tengah */
+    .skills-wrapper {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1rem;
+      width: 90%;
+      max-width: 700px;
+      z-index: 1;
+    }
+    .skill-box {
+      background: rgba(255 255 255 / 0.85);
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+      padding: 1rem;
+      text-align: center;
+      color: #F67280;
+      font-size: 0.95rem;
+      user-select: none;
+      cursor: default;
+      border: 2px solid transparent;
+      transition: border-color 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 120px;
+    }
+    .skill-box:hover {
+      border-color:#F67280;
+    }
+    .skill-icon {
+      width: 36px;
+      height: 36px;
+      margin-bottom: 0.5rem;
+      object-fit: contain;
+      border-radius: 0.25rem;
+      box-shadow: 0 0 4px rgba(0,0,0,0.1);
+    }
+    .skill-title {
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 0.25rem;
+    }
+    .skill-desc {
+      font-weight: 500;
+      font-size: 0.85rem;
+      color: #555;
+    }
+    @media (max-width: 640px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav ul {
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+      main {
+        min-height: 300px;
+        padding-top: 1.5rem;
+        padding-bottom: 2rem;
+      }
+      main img.background {
+        height: 300px;
+      }
+      .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      }
+      .skill-box {
+        height: 110px;
+        font-size: 0.85rem;
+        padding: 0.75rem;
+      }
+      .skill-icon {
+        width: 28px;
+        height: 28px;
+        margin-bottom: 0.4rem;
+      }
+      .skill-title {
+        font-size: 1rem;
+      }
+      .skill-desc {
+        font-size: 0.75rem;
+      }
+    }
+  </style>
+ </head>
+ <body>
+  <header>
+   <h1>
+    Portfolio
+   </h1>
+   <nav id="topNav" role="navigation" aria-label="Primary navigation">
+        <a href="home.html" class="nav-link" tabindex="0">Home</a>
+      <a href="about.html" class="nav-link" tabindex="0">About</a>
+      <a href="skill.html" class="nav-link" tabindex="0" aria-current="page">Skills</a>
+      <a href="sertificate.html" class="nav-link" tabindex="0">Sertificate</a>
+    </nav>
+  </header>
+  <main>
+   <img alt="Decorative floral background with yellow grid pattern and flowers on left and right edges" class="background" height="400" src="https://storage.googleapis.com/a1aa/image/63fa3ac5-1da7-42f3-7511-66d882041eec.jpg" width="1200"/>
+   <h2>
+    My Skills
+   </h2>
+   <div class="skills-wrapper">
+    <div class="skills-grid">
+      <div class="skill-box">
+       <img alt="HTML skill image" class="skill-icon" height="36" src="https://storage.googleapis.com/a1aa/image/7948abbe-f34c-46b7-9dd0-a0e43f9adba3.jpg" width="36"/>
+       <div class="skill-title">
+        HTML
+       </div>
+       <div class="skill-desc">
+        Web Markup
+       </div>
+      </div>
+      <div class="skill-box">
+       <img alt="CSS skill image" class="skill-icon" height="36" src="https://storage.googleapis.com/a1aa/image/f6e1f634-6adc-4c51-997c-d1db33103a90.jpg" width="36"/>
+       <div class="skill-title">
+        CSS
+       </div>
+       <div class="skill-desc">
+        Styling &amp; Layout
+       </div>
+      </div>
+      <div class="skill-box">
+       <img alt="JavaScript skill image" class="skill-icon" height="36" src="https://storage.googleapis.com/a1aa/image/47d958e0-3342-45c6-fef4-05d77a45fca7.jpg" width="36"/>
+       <div class="skill-title">
+        JavaScript
+       </div>
+       <div class="skill-desc">
+        Interactive Web
+       </div>
+      </div>
+      <div class="skill-box">
+       <img alt="Tailwind CSS skill image" class="skill-icon" height="36" src="https://storage.googleapis.com/a1aa/image/1db0bc90-8399-4c21-a709-09fe33bee78f.jpg" width="36"/>
+       <div class="skill-title">
+        Linux Debian
+       </div>
+       <div class="skill-desc">
+        Web Server
+       </div>
+      </div>
+      <div class="skill-box">
+       <img alt="React skill image" class="skill-icon" height="36" src="https://storage.googleapis.com/a1aa/image/74d799ca-3b4a-4716-f731-ca7753cffc76.jpg" width="36"/>
+       <div class="skill-title">
+        Red Hat
+       </div>
+       <div class="skill-desc">
+        System Administrasi
+       </div>
+      </div>
+      <div class="skill-box">
+       <img alt="Node.js skill image" class="skill-icon" height="36" src="https://storage.googleapis.com/a1aa/image/1482291f-ad8c-4a86-1aa2-68c554a916d7.jpg" width="36"/>
+       <div class="skill-title">
+        Docker 
+       </div>
+       <div class="skill-desc">
+        Container
+       </div>
+      </div>
+      <div class="skill-box">
+       <img alt="Git skill image" class="skill-icon" height="36" src="https://storage.googleapis.com/a1aa/image/3b195fc3-7010-4691-e592-dadbd7dbf8f7.jpg" width="36"/>
+       <div class="skill-title">
+        Network
+       </div>
+       <div class="skill-desc">
+        Mikrotik 
+       </div>
+      </div>
+      <div class="skill-box">
+       <img alt="Responsive Design skill image" class="skill-icon" height="36" src="https://storage.googleapis.com/a1aa/image/3f45d3b1-3576-48af-5331-74596f7eac9d.jpg" width="36"/>
+       <div class="skill-title">
+        Cisco 
+       </div>
+       <div class="skill-desc">
+        Cisco IOS network
+       </div>
+      </div>
+    </div>
+   </div>
+  </main>
+  <script>
+   // No interactive JavaScript needed for this static page
+  </script>
+ </body>
+</html>

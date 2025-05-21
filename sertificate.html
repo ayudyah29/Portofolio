@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects - Portfolio</title>
+  <style>
+    /* Reset and base styles */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body, html {
+      margin: 0; padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url(foto/download.jpg);
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      color: #333;
+      min-height: 100vh;
+      line-height: 1.5;
+    }
+    header {
+      height: 60px;
+      background: #F67280;
+      color: white;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1rem;
+      box-shadow: 0 2px 7px rgb(0 0 0 / 0.15);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1100;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.4rem;
+      line-height: 1;
+    }
+    nav#topNav {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      flex-wrap: nowrap;
+    }
+    nav#topNav a {
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.3rem 0.7rem;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+    nav#topNav a:hover,
+    nav#topNav a.active {
+      background: white;
+      color: #f45c6d;
+      text-decoration: none;
+    }
+    main {
+      padding: 5rem 2rem 2rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    h1.main-header {
+      font-size: 2.4rem;
+      color: #f45c6d;
+      margin-bottom: 1.5rem;
+    }
+    h2.section-title {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      font-weight: 700;
+      color: #f45c6d;
+    }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.6rem;
+      padding: 0;
+    }
+    .project-card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 3px 7px rgb(0 0 0 / 0.12);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
+    }
+    .project-card:hover, .project-card:focus {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 22px rgb(0 0 0 / 0.2);
+      outline: none;
+    }
+    .project-image {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      pointer-events: none;
+      user-select: none;
+    }
+    .project-content {
+      padding: 1rem 1rem 1.4rem 1rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .project-title {
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: #f45c6d;
+      margin-bottom: 0.35rem;
+      user-select: text;
+    }
+    .project-description {
+      color: #555;
+      flex-grow: 1;
+      font-size: 1rem;
+      user-select: text;
+    }
+    /* Responsive */
+    @media (max-width: 480px) {
+      main {
+        padding: 5rem 1rem 1rem 1rem;
+      }
+      h1.main-header {
+        font-size: 2rem;
+      }
+      nav#topNav a {
+        font-size: 0.9rem;
+        padding: 0.25rem 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header role="banner">
+    <h1>portfolio</h1>
+    <nav id="topNav" role="navigation" aria-label="Primary navigation">
+        <a href="home.html" class="nav-link" tabindex="0">Home</a>
+      <a href="about.html" class="nav-link" tabindex="0">About</a>
+      <a href="skill.html" class="nav-link" tabindex="0">Skills</a>
+      <a href="sertificate.html" class="nav-link active" tabindex="0" aria-current="page">Sertificate</a>
+    </nav>
+  </header>
+  <main role="main">
+    <h1 class="main-header">Sertificate</h1>
+    <div class="projects-grid" aria-label="Sertificate list">
+      <div class="project-card" tabindex="0" role="button" aria-label="Project Portfolio Website">
+        <img src="foto/Sertifikat MTCNA.png" alt="Portfolio website screenshot" class="project-image" />
+        <div class="project-content">
+          <h3 class="project-title">MTCNA</h3>
+          <p class="project-description">MikroTik certification program for entry-level network engineers. This certification helps Network Engineers understand the basics of networking, improve their skills, and add value to their careers.</p>
+        </div>
+      </div>
+      <div class="project-card" tabindex="0" role="button" aria-label="Project E-commerce Store">
+        <img src="foto/Sertifikat java.png" alt="E-commerce store screenshot" class="project-image" />
+        <div class="project-content">
+          <h3 class="project-title">JavaScrip</h3>
+          <p class="project-description">Formal recognition that shows that someone has knowledge and skills in the JavaScript programming language, both for front-end and back-end web development. This certification can increase one's credibility and career opportunities in the technology industry.</p>
+        </div>
+      </div>
+      <div class="project-card" tabindex="0" role="button" aria-label="Project Blog Platform">
+        <img src="foto/Sertifikat Fortinet1.png" alt="Blog platform screenshot" class="project-image" />
+        <div class="project-content">
+          <h3 class="project-title">Fortinet</h3>
+          <p class="project-description">A training and certification program provided by Fortinet, a company that provides network security solutions. This certification aims to validate an individual's knowledge and skills in using and managing Fortinet products, as well as network security in general.</p>
+        </div>
+      </div>
+      <div class="project-card" tabindex="0" role="button" aria-label="Project Blog Platform">
+        <img src="foto/Sertifikat Fortinet2.png" alt="Blog platform screenshot" class="project-image" />
+        <div class="project-content">
+          <h3 class="project-title">Fortinet</h3>
+          <p class="project-description">A training and certification program provided by Fortinet, a company that provides network security solutions. This certification aims to validate an individual's knowledge and skills in using and managing Fortinet products, as well as network security in general.</p>
+        </div>
+      </div>
+      <div class="project-card" tabindex="0" role="button" aria-label="Project Blog Platform">
+        <img src="foto/Sertifikat aguna.png" alt="Blog platform screenshot" class="project-image" />
+        <div class="project-content">
+          <h3 class="project-title">Aguna Network Fundamental</h3>
+          <p class="project-description">A sign that someone has completed a course provided by the Aguna Course online learning platform and passed the exam with a minimum score of 70%. This certificate is proof of competence in the IT field taught in the course.</p>
+        </div>
+      </div>
+      <div class="project-card" tabindex="0" role="button" aria-label="Project Blog Platform">
+        <img src="foto/Sertifikat aguna2.png" alt="Blog platform screenshot" class="project-image" />
+        <div class="project-content">
+          <h3 class="project-title">Aguna Virtual Machine</h3>
+          <p class="project-description">A sign that someone has completed a course provided by the Aguna Course online learning platform and passed the exam with a minimum score of 70%. This certificate is proof of competence in the IT field taught in the course.</p>
+        </div>
+      </div>
+      <div class="project-card" tabindex="0" role="button" aria-label="Project Blog Platform">
+        <img src="foto/Sertifikat aguna3.png" alt="Blog platform screenshot" class="project-image" />
+        <div class="project-content">
+          <h3 class="project-title">Aguna Linux Fundamental</h3>
+          <p class="project-description">A sign that someone has completed a course provided by the Aguna Course online learning platform and passed the exam with a minimum score of 70%. This certificate is proof of competence in the IT field taught in the course.</p>
+        </div>
+      </div>
+      <div class="project-card" tabindex="0" role="button" aria-label="Project Blog Platform">
+      <img src="foto/Sertifikat Red hat.png" alt="Blog platform screenshot" class="project-image" />
+      <div class="project-content">
+        <h3 class="project-title">Red Had</h3>
+        <p class="project-description">To validate the knowledge and skills of IT professionals in managing and operating the Red Hat Enterprise Linux (RHEL) operating system. These certifications range from basic to advanced levels, such as RHCSA (Red Hat Certified System Administrator), RHCE (Red Hat Certified Engineer), and RHCA (Red Hat Certified Architect).</p>
+       </div>
+      </div>
+      <div class="project-card" tabindex="0" role="button" aria-label="Project Blog Platform">
+        <img src="foto/Sertifikat IDN.png" alt="Blog platform screenshot" class="project-image" />
+        <div class="project-content">
+          <h3 class="project-title">IDN Academy</h3>
+          <p class="project-description">A program from IDN Boarding School that invites students to teach and share IT knowledge to other schools. This program aims to improve the quality of education and expand the reach of IT knowledge that they have mastered.</p>
+       </div>
+      </div>
+      <div class="project-card" tabindex="0" role="button" aria-label="Project Blog Platform">
+        <img src="foto/Sertifikat Bootcamp.png" alt="Blog platform screenshot" class="project-image" />
+        <div class="project-content">
+          <h3 class="project-title">MTCTCE</h3>
+          <p class="project-description">"MikroTik Certified Traffic Control Engineer", which is an advanced certification from MikroTik that focuses on managing and controlling traffic (traffic control) on the network. This certification proves a deep understanding of MikroTik features related to bandwidth management, firewalls, and network traffic settings.</p>
+        </div>
+      </div>
+  </main>
+</body>
+</html>
