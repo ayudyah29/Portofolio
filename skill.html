@@ -97,14 +97,6 @@
       font-weight: 700;
       color: #F67280;
     }
-
-    /* Tambahan: wrapper untuk grid agar selalu di tengah */
-    .skills-wrapper {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-    }
-
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -189,6 +181,42 @@
         font-size: 0.75rem;
       }
     }
+    footer {
+            width: 100%;
+            text-align: center;
+            padding: 10px 15px;
+            background-color: rgba(255, 255, 255, 0.7);
+            color: #333;
+            margin-top: 20px;
+            position: relative;
+            bottom: 0;
+            font-family: 'PT Sans', cursive;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      main {
+        padding: 5rem 1rem 2rem 1rem;
+        height: auto;
+        justify-content: flex-start;
+      }
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      nav#topNav a {
+        font-size: 0.9rem;
+        padding: 0.25rem 0.5rem;
+      }
+      .links a {
+        margin: 0.5rem 0.5rem;
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+      }
+    }
   </style>
  </head>
  <body>
@@ -208,85 +236,92 @@
    <h2>
     My Skills
    </h2>
-   <div class="skills-wrapper">
-    <div class="skills-grid">
-      <div class="skill-box">
-       <img alt="HTML skill image" class="skill-icon" height="36" src="https://storage.googleapis.com/a1aa/image/7948abbe-f34c-46b7-9dd0-a0e43f9adba3.jpg" width="36"/>
-       <div class="skill-title">
-        HTML
-       </div>
-       <div class="skill-desc">
-        Web Markup
-       </div>
-      </div>
-      <div class="skill-box">
-       <img alt="CSS skill image" class="skill-icon" height="36" src="https://storage.googleapis.com/a1aa/image/f6e1f634-6adc-4c51-997c-d1db33103a90.jpg" width="36"/>
-       <div class="skill-title">
-        CSS
-       </div>
-       <div class="skill-desc">
-        Styling &amp; Layout
-       </div>
-      </div>
-      <div class="skill-box">
-       <img alt="JavaScript skill image" class="skill-icon" height="36" src="https://storage.googleapis.com/a1aa/image/47d958e0-3342-45c6-fef4-05d77a45fca7.jpg" width="36"/>
-       <div class="skill-title">
-        JavaScript
-       </div>
-       <div class="skill-desc">
-        Interactive Web
-       </div>
-      </div>
-      <div class="skill-box">
-       <img alt="Tailwind CSS skill image" class="skill-icon" height="36" src="https://storage.googleapis.com/a1aa/image/1db0bc90-8399-4c21-a709-09fe33bee78f.jpg" width="36"/>
-       <div class="skill-title">
-        Linux Debian
-       </div>
-       <div class="skill-desc">
-        Web Server
-       </div>
-      </div>
-      <div class="skill-box">
-       <img alt="React skill image" class="skill-icon" height="36" src="https://storage.googleapis.com/a1aa/image/74d799ca-3b4a-4716-f731-ca7753cffc76.jpg" width="36"/>
-       <div class="skill-title">
-        Red Hat
-       </div>
-       <div class="skill-desc">
-        System Administrasi
-       </div>
-      </div>
-      <div class="skill-box">
-       <img alt="Node.js skill image" class="skill-icon" height="36" src="https://storage.googleapis.com/a1aa/image/1482291f-ad8c-4a86-1aa2-68c554a916d7.jpg" width="36"/>
-       <div class="skill-title">
-        Docker 
-       </div>
-       <div class="skill-desc">
-        Container
-       </div>
-      </div>
-      <div class="skill-box">
-       <img alt="Git skill image" class="skill-icon" height="36" src="https://storage.googleapis.com/a1aa/image/3b195fc3-7010-4691-e592-dadbd7dbf8f7.jpg" width="36"/>
-       <div class="skill-title">
-        Network
-       </div>
-       <div class="skill-desc">
-        Mikrotik 
-       </div>
-      </div>
-      <div class="skill-box">
-       <img alt="Responsive Design skill image" class="skill-icon" height="36" src="https://storage.googleapis.com/a1aa/image/3f45d3b1-3576-48af-5331-74596f7eac9d.jpg" width="36"/>
-       <div class="skill-title">
-        Cisco 
-       </div>
-       <div class="skill-desc">
-        Cisco IOS network
-       </div>
-      </div>
+   <div class="skills-grid">
+    <div class="skill-box">
+     <img alt="HTML skill image" class="skill-icon" height="36" src="https://storage.googleapis.com/a1aa/image/7948abbe-f34c-46b7-9dd0-a0e43f9adba3.jpg" width="36"/>
+     <div class="skill-title">
+      HTML
+     </div>
+     <div class="skill-desc">
+      Web Markup
+     </div>
+    </div>
+    <div class="skill-box">
+     <img alt="CSS skill image" class="skill-icon" height="36" src="https://storage.googleapis.com/a1aa/image/f6e1f634-6adc-4c51-997c-d1db33103a90.jpg" width="36"/>
+     <div class="skill-title">
+      CSS
+     </div>
+     <div class="skill-desc">
+      Styling &amp; Layout
+     </div>
+    </div>
+    <div class="skill-box">
+     <img alt="JavaScript skill image" class="skill-icon" height="36" src="https://storage.googleapis.com/a1aa/image/47d958e0-3342-45c6-fef4-05d77a45fca7.jpg" width="36"/>
+     <div class="skill-title">
+      JavaScript
+     </div>
+     <div class="skill-desc">
+      Interactive Web
+     </div>
+    </div>
+    <div class="skill-box">
+     <img alt="Tailwind CSS skill image" class="skill-icon" height="36" src="https://storage.googleapis.com/a1aa/image/1db0bc90-8399-4c21-a709-09fe33bee78f.jpg" width="36"/>
+     <div class="skill-title">
+      Linux Debian
+     </div>
+     <div class="skill-desc">
+      Web Server
+     </div>
+    </div>
+    <div class="skill-box">
+     <img alt="React skill image" class="skill-icon" height="36" src="https://storage.googleapis.com/a1aa/image/74d799ca-3b4a-4716-f731-ca7753cffc76.jpg" width="36"/>
+     <div class="skill-title">
+      Red Hat
+     </div>
+     <div class="skill-desc">
+      System Administrasi
+     </div>
+    </div>
+    <div class="skill-box">
+     <img alt="Node.js skill image" class="skill-icon" height="36" src="https://storage.googleapis.com/a1aa/image/1482291f-ad8c-4a86-1aa2-68c554a916d7.jpg" width="36"/>
+     <div class="skill-title">
+      Docker 
+     </div>
+     <div class="skill-desc">
+      Container
+     </div>
+    </div>
+    <div class="skill-box">
+     <img alt="Git skill image" class="skill-icon" height="36" src="https://storage.googleapis.com/a1aa/image/3b195fc3-7010-4691-e592-dadbd7dbf8f7.jpg" width="36"/>
+     <div class="skill-title">
+      Network
+     </div>
+     <div class="skill-desc">
+      Mikrotik 
+     </div>
+    </div>
+    <div class="skill-box">
+     <img alt="Responsive Design skill image" class="skill-icon" height="36" src="https://storage.googleapis.com/a1aa/image/3f45d3b1-3576-48af-5331-74596f7eac9d.jpg" width="36"/>
+     <div class="skill-title">
+      Cisco 
+     </div>
+     <div class="skill-desc">
+      Cisco IOS network
+     </div>
+     </div>
     </div>
    </div>
   </main>
   <script>
    // No interactive JavaScript needed for this static page
   </script>
+  <footer>
+        <div class="sosial-link">
+            <a href="https://www.instagram.com/ayudyahrchm25/" target="_blank">Instagram</a>
+            <a href="https://ayudyahhh.blogspot.com/" target="_blank">Blogspot</a>
+            <a href="https://www.linkedin.com/in/ayu-dyah-rachmaniya-76814a28a/" target="_blank">LinkedIn</a>
+        </div>
+        <p>&copy; 2025 Ayu Dyah Rachmaniya</p>
+    </footer>
  </body>
 </html>
