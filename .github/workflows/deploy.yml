@@ -1,8 +1,9 @@
-name: Deploy Portfolio to VPS
+name: Deploy Portfolio
 
 on:
   push:
-    branches: [ "main" ]   # Jalankan otomatis setiap kali push ke branch main
+    branches:
+      - main
 
 jobs:
   deploy:
@@ -10,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
       - name: Copy project files to VPS
         uses: appleboy/scp-action@master
@@ -19,7 +20,7 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
           source: "."
-          target: "/root/portofolio"    # Ubah ke path ini (bukan ~/Portofolio)
+          target: "/root/portofolio"
 
       - name: Deploy container in VPS
         uses: appleboy/ssh-action@master
@@ -28,6 +29,9 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
-            cd ~/Portfolio
-            docker compose down || true
-            docker compose up -d --build
+            cd /root/portofolio
+            docker stop portfolio_app || true
+            docker rm portfolio_app || true
+            docker build -t portfolio-portfolio .
+            docker run -d -p 8080:80 --name portfolio_app portfolio-portfolio
+            sudo systemctl restart nginx
