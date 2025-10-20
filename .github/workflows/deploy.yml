@@ -19,7 +19,7 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
           source: "."
-          target: "~/portfolio"
+          target: "/root/portofolio"    # Ubah ke path ini (bukan ~/Portofolio)
 
       - name: Deploy container in VPS
         uses: appleboy/ssh-action@master
@@ -28,6 +28,6 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
-            cd ~/portfolio
+            cd ~/Portfolio
             docker compose down || true
             docker compose up -d --build
